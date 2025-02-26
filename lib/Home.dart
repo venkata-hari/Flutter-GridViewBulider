@@ -1,9 +1,6 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
-
 class Home extends StatelessWidget {
   const Home({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,14 +58,19 @@ class HomeBody extends StatelessWidget {
     {"id": 8, "todo": "Watch a documentary", "completed": false, "userId": 84},
     {"id": 9, "todo": "Memorize a poem", "completed": true, "userId": 13},
     {"id": 10, "todo": "Memorize a poem", "completed": true, "userId": 13},
-    {"id": 11, "todo": "Watch a classic movie", "completed": true, "userId": 68},
+    {
+      "id": 11,
+      "todo": "Watch a classic movie",
+      "completed": true,
+      "userId": 68,
+    },
     {"id": 12, "todo": "Watch a documentary", "completed": false, "userId": 84},
   ];
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10),
       child: SizedBox(
-      // Adjust based on available space
+        // Adjust based on available space
         child: ListView.builder(
           itemCount: data.length,
           itemBuilder: (context, index) {
@@ -85,12 +87,17 @@ class HomeBody extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(item['todo'] as String,
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  Text(
+                    item['todo'] as String,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                   SizedBox(height: 5),
                   Text(
                     item['completed'] as bool ? 'Completed' : 'Not Completed',
-                    style: TextStyle(color: item['completed'] as bool ? Colors.green : Colors.red),
+                    style: TextStyle(
+                      color:
+                          item['completed'] as bool ? Colors.green : Colors.red,
+                    ),
                   ),
                 ],
               ),
