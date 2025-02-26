@@ -64,7 +64,6 @@ class HomeBody extends StatelessWidget {
     {"id": 11, "todo": "Watch a classic movie", "completed": true, "userId": 68},
     {"id": 12, "todo": "Watch a documentary", "completed": false, "userId": 84},
   ];
-
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10),
